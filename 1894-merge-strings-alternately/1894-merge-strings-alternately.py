@@ -16,3 +16,17 @@ class Solution:
             j +=1
         return result
 # 지그재그 iterator 라는 이름으로 불림. 더 세련되게 코드를 짤 수도 있을 것 같음. 걸린시간 15분정도
+"""
+해답 
+class Solution(object):
+    def mergeAlternately(self, word1, word2):
+        result = []
+        i = 0
+        while i < len(word1) or i < len(word2):
+            if i < len(word1):
+                result.append(word1[i])
+            if i < len(word2):
+                result.append(word2[i])
+            i += 1
+        return ''.join(result)
+"""
