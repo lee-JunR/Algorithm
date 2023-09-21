@@ -15,3 +15,4 @@ class Solution:
             i +=1
             j +=1
         return result
+# 지그재그 iterator 라는 이름으로 불림. 더 세련되게 코드를 짤 수도 있을 것 같음. 걸린시간 15분정도
