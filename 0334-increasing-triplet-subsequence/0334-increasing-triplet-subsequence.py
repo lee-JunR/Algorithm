@@ -1,14 +1,15 @@
-# class Solution:
-#     def increasingTriplet(self, nums: List[int]) -> bool:
-#         # if len(nums) < 4 :
-#         #     return nums.sort() == nums
-#         # else
-#             for i in enumerate(nums):
-#                 for j in enumerate(nums[i[0]+1:]): # 2,3,4,5
-#                     if len(nums[i[0]+1:])>2 and i[1] < j[1]: # i = 1 < j = 2
-#                         for k in enumerate(nums[j[0]+1:]): 
-#                             if j[1] < k[1]:
-#                                 return True
+''' 내가 푼 문제 시간복잡도가 너무 높다
+class Solution:
+    def increasingTriplet(self, nums: List[int]) -> bool:
+        nums= list(map(float,nums))
+        for i in enumerate(nums):
+            for j in enumerate(nums[i[0]+1:]): # 2,3,4,5
+                if len(nums[i[0]+1:])>1 and i[1] < j[1]: # i = 1 < j = 2
+                   for k in enumerate(nums[j[0]+1:]): 
+                        if j[1] < k[1]:
+                            return True
+'''
+# O(n) 시간복잡도를 갖는 솔루션. 아름답다.
 class Solution:
     def increasingTriplet(self, nums):
         f = float('inf')
