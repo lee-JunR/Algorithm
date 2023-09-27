@@ -1,18 +1,19 @@
 # class Solution:
 #     def maxOperations(self, nums: List[int], k: int) -> int:
 #         count = 0
+#         temp_nums = list(nums)
 #         for x in nums:
-#             if (k-x) != x and x < k and nums.count(x) > 0 and nums.count(k-x) > 0 :
-#                 nums.remove(x)
-#                 nums.remove(k-x)
+#             if (k-x) != x and x < k and temp_nums.count(x) > 0 and temp_nums.count(k-x) > 0 :
+#                 temp_nums.remove(x)
+#                 temp_nums.remove(k-x)
 #                 count+=1
 
-#             elif nums.count(x) > 1 and x +x == k :
-#                 nums.remove(x)
-#                 nums.remove(x)
+#             elif temp_nums.count(x) > 1 and x +x == k :
+#                 temp_nums.remove(x)
+#                 temp_nums.remove(x)
 #                 count+=1
 #         return count
-# 
+
 class Solution: 
     def maxOperations(self, nums: List[int], k: int) -> int: 
         count = 0 
