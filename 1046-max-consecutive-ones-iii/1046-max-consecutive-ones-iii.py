@@ -1,21 +1,39 @@
+# class Solution:
+#     def longestOnes(self, nums: List[int], k: int) -> int:
+
+#         count = 0
+#         s, e = 0, 1
+#         max_count = 0
+#         while e <= len(nums)+1:
+#             if nums[s:e].count(0) <= k:
+#                 count += 1
+#                 e += 1
+#                 max_count = max(max_count, count)
+#             else :
+#                 s+=1
+#                 count -=1
+#                 if nums[s-1] == 1:
+#                     count -= 1
+
+#       return max_count
 class Solution:
-    def longestOnes(self, A: List[int], K: int) -> int:
-      left = right = 0
-      
-      for right in range(len(A)):
-        # if we encounter a 0 the we decrement K
-        if A[right] == 0:
-          K -= 1
-        # else no impact to K
+    def longestOnes(self, nums: List[int], k: int) -> int:
+        left=0
+        count_zero=0
+        max_array=0
+
+        for right in range(len(nums)):
+            if nums[right] == 0:
+                count_zero+=1
+            
+            while count_zero > k:
+                if nums[left] == 0:
+                    count_zero-=1
+                left+=1
+            
+            max_array=max(max_array,right-left+1)
+
+        return max_array
+
+
         
-        # if K < 0 then we need to move the left part of the window forward
-        # to try and remove the extra 0's
-        if K < 0:
-          # if the left one was zero then we adjust K
-          if A[left] == 0:
-            K += 1
-          # regardless of whether we had a 1 or a 0 we can move left side by 1
-          # if we keep seeing 1's the window still keeps moving as-is
-          left += 1
-      
-      return right - left + 1
