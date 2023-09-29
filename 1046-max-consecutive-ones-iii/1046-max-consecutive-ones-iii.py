@@ -4,18 +4,14 @@
 #         count = 0
 #         s, e = 0, 1
 #         max_count = 0
-#         while e <= len(nums)+1:
+#         while e <= len(nums):
 #             if nums[s:e].count(0) <= k:
-#                 count += 1
+#                 count  = (e-s)
 #                 e += 1
 #                 max_count = max(max_count, count)
 #             else :
 #                 s+=1
-#                 count -=1
-#                 if nums[s-1] == 1:
-#                     count -= 1
-
-#       return max_count
+#         return max_count
 class Solution:
     def longestOnes(self, nums: List[int], k: int) -> int:
         left=0
