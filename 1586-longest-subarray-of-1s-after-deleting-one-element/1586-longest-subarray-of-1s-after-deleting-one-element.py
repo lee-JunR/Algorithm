@@ -1,18 +1,23 @@
 class Solution:
     def longestSubarray(self, nums: List[int]) -> int:
-        zero_count = 0
-        start = end = max_count = 0
+        n = len(nums)  # The size of the input array
 
-        while end < len(nums):
-            if nums[end] == 0:
-                zero_count += 1
+        left = 0  # The left pointer of the sliding window
+        zeros = 0  # Number of zeroes encountered
+        ans = 0  # Maximum length of the subarray
 
-            while zero_count > 1:
-                if nums[start] == 0:
-                    zero_count -= 1
-                start += 1
+        for right in range(n):
+            if nums[right] == 0:
+                zeros += 1  # Increment the count of zeroes
 
-            max_count = max(max_count, end - start + 1)
-            end += 1
+            # Adjust the window to maintain at most one zero in the subarray
+            while zeros > 1:
+                if nums[left] == 0:
+                    zeros -= 1  # Decrement the count of zeroes
+                left += 1  # Move the left pointer to the right
 
-        return max_count-1
+            # Calculate the length of the current subarray and update the maximum length
+            ans = max(ans, right - left + 1 - zeros)
+
+        # If the entire array is the subarray, return the size minus one; otherwise, return the maximum length
+        return ans - 1 if ans == n else ans
