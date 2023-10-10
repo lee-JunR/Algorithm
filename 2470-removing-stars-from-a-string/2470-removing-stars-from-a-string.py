@@ -1,14 +1,12 @@
 class Solution:
     def removeStars(self, s: str) -> str:
-
-        count, ans, s = 0, deque(),s[::-1] 
-
-        for ch in s:
-            if ch == '*': count+=1
-            elif count  : count-=1
-            else        : ans.appendleft(ch) 
-
-        return  ''.join(ans)
+        ans=[]
+        for i in s:
+            if i=='*':
+                ans.pop()
+            else:
+                ans+=[i]
+        return "".join(ans)
 # class Solution:
 #     def removeStars(self, s: str) -> str:
 #         a = []
