@@ -6,5 +6,4 @@ class Solution:
                 a.pop()
             else:
                 a.append(s[i])
-        a = ''.join(map(str, a))
-        return a
+        return ''.join(map(str, a))
