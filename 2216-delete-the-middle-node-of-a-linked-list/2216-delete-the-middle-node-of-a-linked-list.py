@@ -20,7 +20,6 @@
 #             count += 1
 #         node.next = None
 #         return node
-import math
 class Solution:
     def deleteMiddle(self, head):
         c=1
