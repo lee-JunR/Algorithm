@@ -81,9 +81,14 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Array
 |  |
 | ------- |
+| [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
+## Backtracking
+|  |
+| ------- |
+| [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 <!---LeetCode Topics End-->
