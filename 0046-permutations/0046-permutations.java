@@ -11,24 +11,24 @@ class Solution {
     lengthOfArr = nums.length;
     result = new ArrayList<>();
     this.nums = nums;
-    boolean[] visited = new boolean[lengthOfArr];
-    backtrack(new ArrayList<Integer>(),visited);
+    backtrack(new ArrayList<Integer>(), 0);
     return result;
   }
 
-  private static void backtrack(List<Integer> cur, boolean[] visited) {
+  private static void backtrack(List<Integer> cur, int i) {
     if (cur.size() == lengthOfArr) {
       result.add(new ArrayList<>(cur));
       return;
     }
-    for (int i = 0; i < lengthOfArr; i++) {
-      if(visited[i]) continue;
 
-      cur.add(nums[i]);
-      visited[i] = true;
-      backtrack(cur, visited);
+    for (int j = 0; j < lengthOfArr; j++) {
+      if(cur.contains(nums[j])){
+        continue;
+      }
+      cur.add(nums[j]);
+      backtrack(cur, i+1);
       cur.remove(cur.size()-1);
-      visited[i] = false;
     }
+
   }
 }
