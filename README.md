@@ -92,4 +92,16 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 | [0077-combinations](https://github.com/lee-JunR/Algorithm/tree/master/0077-combinations) |
+## Depth-First Search
+|  |
+| ------- |
+| [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
+## Graph
+|  |
+| ------- |
+| [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 <!---LeetCode Topics End-->
