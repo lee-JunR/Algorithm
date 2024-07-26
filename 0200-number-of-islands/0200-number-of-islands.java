@@ -1,7 +1,5 @@
 
-
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 class Solution {
   static boolean[][] visited;
@@ -15,13 +13,13 @@ class Solution {
     return (r >= 0 && r < rowLength) && (c >= 0 && c < colLength) && (grid[r][c] == '1');
   }
 
-  public static void bfs(int r, int c) {
-    Queue<int[]> queue = new LinkedList<>();
-    queue.offer(new int[] { r, c });
+  public static void dfs(int r, int c) {
+    Deque<int []> stack = new ArrayDeque<>();
+    stack.push(new int[] { r, c });
     visited[r][c] = true;
 
-    while (!queue.isEmpty()) {
-      int[] cur = queue.poll();
+    while (!stack.isEmpty()) {
+      int[] cur = stack.pop();
       int curRow = cur[0];
       int curCol = cur[1];
 
@@ -30,7 +28,7 @@ class Solution {
         int nextCol = curCol + dc[i];
         if (isValid(nextRow, nextCol)) {
           if (!visited[nextRow][nextCol]) {
-            queue.offer(new int[] { nextRow, nextCol });
+            stack.push(new int[] { nextRow, nextCol });
             visited[nextRow][nextCol] = true;
           }
         }
@@ -48,7 +46,7 @@ class Solution {
     for (int i = 0; i < rowLength; i++) {
       for (int j = 0; j < colLength; j++) {
         if (!visited[i][j] && grid[i][j] == '1') {
-          bfs(i, j);
+          dfs(i, j);
           count++;
         }
       }
