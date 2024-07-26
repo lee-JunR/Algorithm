@@ -82,6 +82,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
+| [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
@@ -95,13 +96,23 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Depth-First Search
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 ## Breadth-First Search
 |  |
 | ------- |
+| [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 ## Graph
 |  |
 | ------- |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
+## Union Find
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+## Matrix
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->
