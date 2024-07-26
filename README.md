@@ -84,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
+| [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -103,6 +104,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
+| [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Graph
 |  |
 | ------- |
@@ -115,4 +117,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 <!---LeetCode Topics End-->
