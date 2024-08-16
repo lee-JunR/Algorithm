@@ -85,6 +85,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
+| [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -112,6 +113,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
+| [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
 ## Union Find
 |  |
 | ------- |
@@ -125,8 +127,10 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
+| [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
 ## Shortest Path
 |  |
 | ------- |
 | [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
+| [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
 <!---LeetCode Topics End-->
