@@ -98,16 +98,19 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Graph
 |  |
 | ------- |
+| [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 | [0871-keys-and-rooms](https://github.com/lee-JunR/Algorithm/tree/master/0871-keys-and-rooms) |
 ## Union Find
 |  |
@@ -118,4 +121,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
+## Shortest Path
+|  |
+| ------- |
+| [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 <!---LeetCode Topics End-->
