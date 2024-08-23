@@ -83,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [0221-maximal-square](https://github.com/lee-JunR/Algorithm/tree/master/0221-maximal-square) |
 | [0300-longest-increasing-subsequence](https://github.com/lee-JunR/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
@@ -123,6 +124,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [0221-maximal-square](https://github.com/lee-JunR/Algorithm/tree/master/0221-maximal-square) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 ## Heap (Priority Queue)
 |  |
@@ -141,5 +143,6 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Dynamic Programming
 |  |
 | ------- |
+| [0221-maximal-square](https://github.com/lee-JunR/Algorithm/tree/master/0221-maximal-square) |
 | [0300-longest-increasing-subsequence](https://github.com/lee-JunR/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 <!---LeetCode Topics End-->
