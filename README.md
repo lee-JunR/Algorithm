@@ -83,6 +83,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0046-permutations](https://github.com/lee-JunR/Algorithm/tree/master/0046-permutations) |
 | [0200-number-of-islands](https://github.com/lee-JunR/Algorithm/tree/master/0200-number-of-islands) |
+| [0300-longest-increasing-subsequence](https://github.com/lee-JunR/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 | [0739-daily-temperatures](https://github.com/lee-JunR/Algorithm/tree/master/0739-daily-temperatures) |
 | [1171-shortest-path-in-binary-matrix](https://github.com/lee-JunR/Algorithm/tree/master/1171-shortest-path-in-binary-matrix) |
 | [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
@@ -133,4 +134,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | ------- |
 | [0744-network-delay-time](https://github.com/lee-JunR/Algorithm/tree/master/0744-network-delay-time) |
 | [1325-path-with-maximum-probability](https://github.com/lee-JunR/Algorithm/tree/master/1325-path-with-maximum-probability) |
+## Binary Search
+|  |
+| ------- |
+| [0300-longest-increasing-subsequence](https://github.com/lee-JunR/Algorithm/tree/master/0300-longest-increasing-subsequence) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0300-longest-increasing-subsequence](https://github.com/lee-JunR/Algorithm/tree/master/0300-longest-increasing-subsequence) |
 <!---LeetCode Topics End-->
