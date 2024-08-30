@@ -1,73 +1,58 @@
-import java.util.*;
-
 class Solution {
+    public int networkDelayTime(int[][] times, int n, int k) {
+        // ✅ 인풋을 본인이 쓰기 편한 구조로 바꾸기 => 방향 그래프 만들기
+        Map<Integer, List<int[]>> edges = new HashMap<>();
 
-  public int networkDelayTime(int[][] times, int n, int k) {
-    // 그래프 초기화
-    Map<Integer, List<Edge>> edges = new HashMap<>();
-    for (int[] time : times) {
-      int key = time[0];
-      if (!edges.containsKey(key)) {
-        edges.put(key, new ArrayList<>());
-      }
-      edges.get(key).add(new Edge(time[1], time[2]));
-    }
+        for (int[] t : times) {
+            int key = t[0];
 
-    // 다익스트라 알고리즘 실행
-    return dijkstra(edges, k, n); 
-  }
+            if (!edges.containsKey(key)) {
+                edges.put(key, new ArrayList<>());
+            }
 
-  private int dijkstra(Map<Integer, List<Edge>> graph, int start, int size) {
-    final int INF = Integer.MAX_VALUE;
-    int[] distance = new int[size + 1];
-    Arrays.fill(distance, INF);
-    
-    // 최소 힙 구현
-    Queue<Edge> pq = new PriorityQueue<>();
-    pq.add(new Edge(start, 0)); // 시작점 노드와 거리 cost를 설정
-
-    distance[start] = 0;
-
-    while (!pq.isEmpty()) {
-      // 방문
-      Edge cur = pq.remove();
-      if (distance[cur.to] < cur.cost) {
-        continue;
-      }
-      // 다음 노드 처리
-      if (graph.containsKey(cur.to)) {
-        for (Edge next : graph.get(cur.to)) {
-          int nextCost = distance[cur.to] + next.cost;
-          if (nextCost < distance[next.to]) {
-            pq.add(new Edge(next.to, nextCost));
-            distance[next.to] = nextCost;
-          }
+            edges.get(key).add(t);
         }
-      }
-    }
-    
-    int max = 0;
-    for (int i = 1; i <= size; i++) {
-      if (distance[i] == INF) return -1;
-      if (max < distance[i]) {
-        max = distance[i];
-      }
-    }
-    return max;
-  }
-
-  class Edge implements Comparable<Edge> {
-    public int to;
-    public int cost;
-
-    public Edge(int to, int cost) {
-      this.to = to;
-      this.cost = cost;
+        
+        // 다익스트라 알고리즘을 호출하여 최단거리를 계산
+        return dijkstra(edges, n, k);
     }
 
-    @Override
-    public int compareTo(Edge o) {
-      return this.cost - o.cost; // 오름차순 정렬
+    private int dijkstra(Map<Integer, List<int[]>> edges, int n, int k) {
+        int[] visited = new int[n + 1];
+        Arrays.fill(visited, Integer.MAX_VALUE);
+        // 큐에는 { 정점, 거리 } 형태의 배열이 들어간다.
+        Queue<int[]> pq = new PriorityQueue<>((e1, e2) -> e1[1] - e2[1]);
+        pq.add(new int[] { k, 0 });
+        visited[k] = 0;
+
+        int maxTime = 0;
+        int visitCount = 1;
+        while (!pq.isEmpty()) {
+            int[] cur = pq.remove();
+            int u = cur[0], time = cur[1];
+            if (visited[u] < time)
+                continue;
+            maxTime = time;
+
+            // 연결된 모든 간선에 대해 탐색한다.
+            if (!edges.containsKey(u))
+                continue;
+            for (int[] edge : edges.get(u)) {
+                int v = edge[1], w = edge[2];
+                // 이미 더 짧은 거리로 방문한 적이 있는 경우 건너뛴다.
+                if (time + w >= visited[v])
+                    continue;
+
+                // 처음 방문했다면 visitCount++
+                if (visited[v] == Integer.MAX_VALUE)
+                    visitCount++;
+                // ✅ 다익스트라가 수행되며 각 노드까지의 최단 거리 저장
+                visited[v] = time + w;
+                pq.add(new int[] { v, time + w });
+            }
+        }
+        // ✅ k노드로 부터 도달할 수 없는 노드가 존재하는 경우 -1을 반환한다.
+        // ✅ 그 외의 경우 저장된 최단 거리 중 최대값을 반환한다.
+        return visitCount == n ? maxTime : -1;
     }
-  }
 }
