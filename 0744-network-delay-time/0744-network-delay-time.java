@@ -29,21 +29,21 @@ class Solution {
     }
 
     private int dijkstra(Map<Integer, List<Edge>> edges, int n, int k) {
-        int[] vis = new int[n + 1];
-        Arrays.fill(vis, Integer.MAX_VALUE);
-        Queue<int[]> pq = new PriorityQueue<>((e1, e2) -> e1[1] - e2[1]);
+        int[] dist = new int[n + 1];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
         pq.add(new int[] {k, 0});
-        vis[k] = 0;
+        dist[k] = 0;
 
         int maxTime = 0;
         int visitCount = 1;
 
         while (!pq.isEmpty()) {
-            int[] cur = pq.remove();
+            int[] cur = pq.poll();
             int u = cur[0];
             int time = cur[1];
 
-            if (vis[u] < time) continue;
+            if (dist[u] < time) continue;
             maxTime = time;
 
             List<Edge> neighbors = edges.get(u);
@@ -53,11 +53,11 @@ class Solution {
                 int v = edge.target;
                 int w = edge.weight;
 
-                if (time + w >= vis[v]) continue;
-                if (vis[v] == Integer.MAX_VALUE) visitCount++;
+                if (time + w >= dist[v]) continue;
+                if (dist[v] == Integer.MAX_VALUE) visitCount++;
 
-                vis[v] = time + w;
-                pq.add(new int[] {v, time + w});
+                dist[v] = time + w;
+                pq.add(new int[] {v, dist[v]});
             }
         }
 
