@@ -2,46 +2,51 @@ import java.util.*;
 
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
-        Map<Integer, List<int[]>> edges = new HashMap<>();
-
-        for(int[] time: times){
-            int key = time[0];
-            if(!edges.containsKey(key)){
-                edges.put(key, new ArrayList<>());
-            }
-            edges.get(key).add(time);
+        // 그래프를 인접 리스트로 표현
+        Map<Integer, List<int[]>> graph = new HashMap<>();
+        for (int[] time : times) {
+            graph.computeIfAbsent(time[0], key -> new ArrayList<>()).add(new int[] {time[1], time[2]});
         }
-        return dijkstra(edges, n, k);
+        return dijkstra(graph, n, k);
     }
 
-    private int dijkstra(Map<Integer, List<int[]>> edges, int n, int k){
-        int[] vis = new int[n + 1];
-        Arrays.fill(vis, Integer.MAX_VALUE);
-        Queue<int[]> pq = new PriorityQueue<>((e1, e2) -> e1[1] - e2[1]);
-        pq.add(new int[] {k,0});
-        vis[k] = 0;
+    private int dijkstra(Map<Integer, List<int[]>> graph, int n, int k){
+        int[] dist = new int[n + 1];
+        Arrays.fill(dist, Integer.MAX_VALUE);
+        dist[k] = 0;
 
-        int maxTime =0;
-        int visitCount = 1;
-        while(!pq.isEmpty()){
-            int[] cur = pq.remove();
-            int u = cur[0];
-            int time = cur[1];
-            if(vis[u] < time) continue;
-            maxTime = time;
+        // 최소 우선순위 큐를 사용해 가장 작은 거리를 가진 노드를 처리
+        Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[1] - b[1]);
+        pq.add(new int[] {k, 0});
 
-            if(!edges.containsKey(u)) continue;
-            for(int[] edge : edges.get(u)){
-                int v= edge[1];
-                int w = edge[2];
+        while (!pq.isEmpty()) {
+            int[] current = pq.poll();
+            int u = current[0];
+            int currentDist = current[1];
 
-                if(time + w >= vis[v]) continue;
-                if(vis[v] == Integer.MAX_VALUE) visitCount++;
+            if (currentDist > dist[u]) continue;
 
-                vis[v] = time + w;
-                pq.add(new int[] {v, time+ w});
+            if (graph.containsKey(u)) {
+                for (int[] neighbor : graph.get(u)) {
+                    int v = neighbor[0];
+                    int time = neighbor[1];
+
+                    // 더 짧은 경로를 찾은 경우 업데이트
+                    if (dist[u] + time < dist[v]) {
+                        dist[v] = dist[u] + time;
+                        pq.add(new int[] {v, dist[v]});
+                    }
+                }
             }
         }
-        return visitCount == n ? maxTime:-1;
+
+        // 모든 노드에 도달할 수 있는지 확인하고, 최대 시간을 계산
+        int maxTime = 0;
+        for (int i = 1; i <= n; i++) {
+            if (dist[i] == Integer.MAX_VALUE) return -1;
+            maxTime = Math.max(maxTime, dist[i]);
+        }
+
+        return maxTime;
     }
 }
